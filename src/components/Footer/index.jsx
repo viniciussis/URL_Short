@@ -95,7 +95,7 @@ const Footer = () => {
         Challenge by
         <a
           className="message__link"
-          href="https://www.frontendmentor.io?ref=challenge"
+          href="https://www.frontendmentor.io/profile/viniciussis"
           target="_blank"
         >
           {' '}

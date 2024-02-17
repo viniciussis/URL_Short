@@ -1,3 +1,4 @@
+import Cards from './Cards'
 import './MainContent.scss'
 
 const MainContent = () => {
@@ -8,6 +9,7 @@ const MainContent = () => {
         Track how your links are performing across the web with our advanced
         statistics dashboard.
       </p>
+      <Cards />
     </div>
   )
 }
