@@ -1,0 +1,36 @@
+@use '../../../assets/styles/variables';
+
+.form {
+  position: relative;
+  width: 100%;
+  bottom: -100px;
+  display: flex;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  gap: 1rem;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: variables.$dark-violet;
+  background-image: url(../../../assets/images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  .form__link {
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    border: 0;
+    padding: 1rem;
+
+    &::placeholder {
+      color: variables.$grayish-violet;
+    }
+  }
+
+  .form__button {
+    background-color: variables.$cyan;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 700;
+  }
+}

@@ -1,23 +1,59 @@
 @use '../../assets/styles/variables';
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   width: 100%;
-  padding: 1rem 3rem;
-  position: absolute;
+  padding: 2rem 3rem;
   bottom: 0;
   box-sizing: border-box;
+  align-items: center;
 
   font-size: 1rem;
   text-align: center;
+  background-color: variables.$very-dark-blue;
+  color: white;
 
-  .message__link {
-    color: variables.$dark-violet;
-    text-decoration: none;
-    transition: 1s;
+  .footer__logo {
+    font-size: 2.25rem;
+    font-weight: 700;
   }
 
-  .message__link:hover {
-    color: variables.$cyan;
+  .footer__menu {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    .menu__subsection {
+      .subsection__subtitle {
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+      .subsection__link {
+        color: variables.$gray;
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+
+  .footer__social {
+    display: flex;
+    gap: 1.25rem;
+    .social__link{
+      .link__icon{
+        color: white;
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+    }
+  }
+
+  .footer__message {
+    .message__link {
+      color: variables.$cyan;
+      text-decoration: none;
+      transition: 1s;
+    }
   }
 
   @media screen and (min-width: 768px) {
