@@ -1,5 +1,4 @@
 import './Intro.scss'
-import Form from './Form'
 import Button from '../Button'
 
 const Intro = () => {
@@ -18,7 +17,6 @@ const Intro = () => {
         links are performing.
       </p>
       <Button />
-      <Form />
     </div>
   )
 }

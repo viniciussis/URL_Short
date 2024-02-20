@@ -1,0 +1,64 @@
+@use '../../../assets/styles/variables';
+
+.form {
+  position: absolute;
+  width: 90%;
+  top: -100px;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: variables.$dark-violet;
+  background-image: url(../../../assets/images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  .form__link {
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 3px solid variables.$cyan;
+    caret-color: variables.$cyan;
+    margin-bottom: 0.25rem;
+
+    &:focus {
+      border: 3px solid variables.$cyan;
+      outline: 0;
+
+      &::placeholder {
+        color: variables.$grayish-violet;
+      }
+    }
+
+    &::placeholder {
+      color: variables.$grayish-violet;
+    }
+  }
+
+  .form__link--warning {
+    border: 3px solid variables.$red;
+    outline: variables.$red;
+
+    &::placeholder {
+      color: rgba(255, 0, 0, 0.4);
+    }
+  }
+
+  .form__warning {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: variables.$red;
+    font-weight: 500
+  }
+
+  .form__button {
+    margin-top: 1rem;
+    background-color: variables.$cyan;
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 700;
+  }
+}

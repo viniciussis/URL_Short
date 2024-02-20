@@ -1,12 +1,12 @@
 @use '../../assets/styles/variables.scss';
 
 .header {
-  padding: 2.5rem 1.5rem 1.5rem;
+  padding: 2.5rem 1.75rem 1.5rem;
   display: flex;
+  position: relative;
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
 
   .header__menu {
     .menu__button {
