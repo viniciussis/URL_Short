@@ -24,14 +24,21 @@
     display: flex;
     gap: 2rem;
     flex-direction: column;
+
     .menu__subsection {
       .subsection__subtitle {
         margin-bottom: 1rem;
         font-weight: 700;
       }
+
       .subsection__link {
+        cursor: pointer;
         color: variables.$gray;
         margin-bottom: 0.75rem;
+
+        &:hover {
+          color: variables.$cyan;
+        }
       }
     }
   }
@@ -39,11 +46,18 @@
   .footer__social {
     display: flex;
     gap: 1.25rem;
-    .social__link{
-      .link__icon{
-        color: white;
-        width: 1.75rem;
-        height: 1.75rem;
+
+    .social__link {
+      .link__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+
+        &:hover {
+          path {
+            fill: variables.$cyan;
+          }
+        }
+
       }
     }
   }
@@ -57,6 +71,29 @@
   }
 
   @media screen and (min-width: 768px) {
+    padding: 4rem 3rem 1.25rem;
     font-size: 1.5rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 6rem 2rem;
+    align-items: start;
+    justify-items: center;
+
+    .footer__menu {
+      justify-content: space-evenly;
+      flex-direction: row;
+      width: 100%;
+
+      .menu__subsection {
+        text-align: start;
+        font-size: 1rem;
+      }
+    }
+
+    .footer__message {
+      font-size: 1rem;
+      grid-column: 1 / span 3;
+    }
   }
 }

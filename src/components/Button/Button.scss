@@ -2,9 +2,14 @@
 
 .button {
   background-color: variables.$cyan;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2.75rem;
   color: white;
   font-weight: 700;
   font-size: 1.5rem;
   border-radius: 2rem;
+  max-width: 16rem;
+
+  &:hover {
+    background-color: variables.$cyan-opaque;
+  }
 }

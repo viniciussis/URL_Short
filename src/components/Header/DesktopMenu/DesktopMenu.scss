@@ -22,10 +22,19 @@
     font-weight: 700;
     border-radius: 2rem;
 
+    &:hover {
+      color: variables.$dark-violet;
+    }
+
     &--colorful {
       background-color: variables.$cyan;
       color: white;
       padding: 1rem 2rem;
+
+      &:hover {
+        background-color: variables.$cyan-opaque;
+        color: white;
+      }
     }
   }
 }

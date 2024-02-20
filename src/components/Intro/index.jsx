@@ -11,12 +11,14 @@ const Intro = () => {
           alt="Banner"
         />
       </div>
-      <h1 className="intro__title">More than just shorter links</h1>
-      <p className="intro__para">
-        Build your brand’s recognition and get detailed insights on how your
-        links are performing.
-      </p>
-      <Button />
+      <div className="intro__info">
+        <h1 className="info__title">More than just shorter links</h1>
+        <p className="info__para">
+          Build your brand’s recognition and get detailed insights on how your
+          links are performing.
+        </p>
+        <Button />
+      </div>
     </div>
   )
 }

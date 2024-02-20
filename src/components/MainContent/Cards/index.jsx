@@ -2,8 +2,8 @@ import './Cards.scss'
 
 const Cards = () => {
   return (
-    <div className="cardsContainer">
-      <div className="cardsContainer__card">
+    <>
+      <div className="card">
         <div className="card__circle">
           <img
             src="src\assets\images\icon-brand-recognition.svg"
@@ -17,7 +17,7 @@ const Cards = () => {
           a thing. Branded links help instil confidence in your content.
         </p>
       </div>
-      <div className="cardsContainer__card">
+      <div className="card card--down">
         <div className="card__circle">
           <img
             src="src\assets\images\icon-detailed-records.svg"
@@ -31,7 +31,7 @@ const Cards = () => {
           people engage with your content helps inform better decisions.
         </p>
       </div>
-      <div className="cardsContainer__card">
+      <div className="card card--doubleDown">
         <div className="card__circle">
           <img
             src="src\assets\images\icon-fully-customizable.svg"
@@ -45,8 +45,8 @@ const Cards = () => {
           customizable links, supercharging audience engagement.
         </p>
       </div>
-      <div className="cardsContainer__line" />
-    </div>
+      <div className="colorfulLine" />
+    </>
   )
 }
 

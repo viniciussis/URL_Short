@@ -11,11 +11,13 @@ const MainContent = ({ callingAPI, link, setLink, links }) => {
         <LinkCard link={link} key={index} />
       ))}
       <h2 className="mainContent__title">Advanced Statistics</h2>
-      <p className="main__para">
+      <p className="mainContent__para">
         Track how your links are performing across the web with our advanced
         statistics dashboard.
       </p>
-      <Cards />
+      <div className="mainContent__cards">
+        <Cards />
+      </div>
     </div>
   )
 }

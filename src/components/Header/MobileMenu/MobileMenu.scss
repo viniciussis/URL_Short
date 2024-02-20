@@ -49,6 +49,10 @@
 
     &--colorful {
       background-color: variables.$cyan;
+
+      &:hover {
+        background-color: variables.$cyan-opaque;
+      }
     }
   }
 }
