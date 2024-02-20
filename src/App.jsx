@@ -11,7 +11,10 @@ import { useState } from 'react'
 
 function App() {
   const [link, setLink] = useState('')
-  const [links, setLinks] = useState([])
+  const [links, setLinks] = useState([{
+    userLink : 'https://translate.google.com/?sl=en&tl=pt&text=poverty&op=translate',
+    shortLink : 'https://translate.google.com/?sl=en&tl=pt&text=poverty&op=translate'
+  }])
   const callingAPI = (e) => {
     e.preventDefault();
     const apiUrl = 'https://cleanuri.com/api/v1/shorten'

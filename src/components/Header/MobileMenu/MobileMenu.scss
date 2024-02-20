@@ -1,6 +1,19 @@
 @use '../../../assets/styles/variables.scss';
 
-.mobileMenu {
+.menuToggle {
+  .menuToggle__button {
+    background-color: transparent;
+    border: 0;
+
+    .button__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      color: variables.$gray;
+    }
+  }
+}
+
+.menuBar {
   position: absolute;
   top: 100%;
   left: 0;
@@ -14,16 +27,16 @@
   flex-direction: column;
   color: white;
 
-  .mobileMenu__links {
+  .menuBar__options {
     display: flex;
     flex-direction: column;
   }
 
-  .mobileMenu__divider {
+  .menuBar__divider {
     border: 1px solid variables.$gray-opaque;
   }
 
-  .mobileMenu__login {
+  .menuBar__login {
     display: flex;
     flex-direction: column;
   }
@@ -33,9 +46,9 @@
     font-weight: 700;
     padding: 1rem 0;
     border-radius: 2rem;
-  }
 
-  .__links--green {
-    background-color: variables.$cyan;
+    &--colorful {
+      background-color: variables.$cyan;
+    }
   }
 }

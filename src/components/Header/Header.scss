@@ -5,18 +5,33 @@
   display: flex;
   position: relative;
   width: 100%;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 
-  .header__menu {
-    .menu__button {
-      background-color: transparent;
-      border: 0;
-      .button__icon {
-        width: 2.5rem;
-        height: 2.5rem;
-        color: variables.$gray;
-      }
+  .header__logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__desktop {
+    display: none;
+    width: 100%;
+  }
+
+  .header__mobile {
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 2.5rem 4rem 1.5rem;
+
+    .header__desktop {
+      display: flex;
+    }
+
+    .header__mobile {
+      display: none;
     }
   }
 }
