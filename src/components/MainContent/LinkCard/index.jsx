@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './LinkCard.scss'
-import PropType from 'prop-types'
+import PropTypes from 'prop-types'
 
 const LinkCard = ({ link }) => {
   const [copiedLink, setCopiedLink] = useState(false)
@@ -35,6 +35,10 @@ const LinkCard = ({ link }) => {
       </div>
     </div>
   )
+}
+
+LinkCard.propTypes = {
+  link: PropTypes.object.isRequired
 }
 
 export default LinkCard

@@ -2,6 +2,7 @@ import Cards from './Cards'
 import Form from './Form'
 import LinkCard from './LinkCard'
 import './MainContent.scss'
+import PropTypes from 'prop-types'
 
 const MainContent = ({ callingAPI, link, setLink, links }) => {
   return (
@@ -20,6 +21,13 @@ const MainContent = ({ callingAPI, link, setLink, links }) => {
       </div>
     </div>
   )
+}
+
+MainContent.propTypes = {
+  callingAPI: PropTypes.func,
+  links: PropTypes.arrayOf(PropTypes.object).isRequired,
+  link: PropTypes.string.isRequired,
+  setLink: PropTypes.func
 }
 
 export default MainContent
