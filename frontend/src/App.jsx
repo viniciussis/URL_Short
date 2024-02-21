@@ -11,24 +11,14 @@ import { useState } from 'react'
 
 function App() {
   const [link, setLink] = useState('')
-  const [links, setLinks] = useState([
-    {
-      userLink:
-        'https://translate.google.com/?sl=en&tl=pt&text=poverty&op=translate',
-      shortLink: 'https://translate.google',
-    },
-    {
-      userLink:
-        'https://translate.google.com/?sl=en&tl=pt&text=poverty&op=translate',
-      shortLink: 'https://translate.google',
-    },
-  ])
+  const [links, setLinks] = useState([])
   async function callingAPI(e) {
     e.preventDefault()
-    const apiUrl = 'https://cleanuri.com/api/v1/shorten'
+
+    const backendUrl = 'http://localhost:3001/shorten'
 
     try {
-      const response = await fetch(apiUrl, {
+      const response = await fetch(backendUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,11 +30,12 @@ function App() {
         ...links,
         {
           userLink: link,
-          shortLink: data.result_url
-        }
+          shortLink: data.result_url,
+        },
       ])
+      setLink('')
     } catch (error) {
-      console.error('Failed to short link: ', error)
+      console.error('Failed to call backend: ', error)
     }
   }
 

@@ -5,8 +5,13 @@ import PropType from 'prop-types'
 const LinkCard = ({ link }) => {
   const [copiedLink, setCopiedLink] = useState(false)
 
-  const onCopying = () => {
-    setCopiedLink(true)
+  const onCopying = async () => {
+    setCopiedLink(true) 
+    try {
+      await navigator.clipboard.writeText(link.shortLink)
+    } catch (e) {
+      console.log(e.message)
+    }
     setTimeout(() => {
       setCopiedLink(false)
     }, 4000)
