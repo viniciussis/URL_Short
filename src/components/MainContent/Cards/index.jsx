@@ -1,4 +1,7 @@
 import './Cards.scss'
+import brandRecognition from '../../../assets/images/icon-brand-recognition.svg'
+import detailedRecords from '../../../assets/images/icon-detailed-records.svg'
+import fullyCustomizeble from '../../../assets/images/icon-fully-customizable.svg'
 
 const Cards = () => {
   return (
@@ -6,7 +9,7 @@ const Cards = () => {
       <div className="card">
         <div className="card__circle">
           <img
-            src="src\assets\images\icon-brand-recognition.svg"
+            src={brandRecognition}
             className="circle__icon"
             alt="A graph icon"
           />
@@ -20,7 +23,7 @@ const Cards = () => {
       <div className="card card--down">
         <div className="card__circle">
           <img
-            src="src\assets\images\icon-detailed-records.svg"
+            src={detailedRecords}
             className="circle__icon"
             alt="A velocimeter icon"
           />
@@ -34,7 +37,7 @@ const Cards = () => {
       <div className="card card--doubleDown">
         <div className="card__circle">
           <img
-            src="src\assets\images\icon-fully-customizable.svg"
+            src={fullyCustomizeble}
             className="circle__icon"
             alt="A icon with tree pencils"
           />

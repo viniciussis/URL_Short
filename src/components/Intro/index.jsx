@@ -1,5 +1,6 @@
 import './Intro.scss'
 import Button from '../Button'
+import banner from '../../assets/images/illustration-working.svg'
 
 const Intro = () => {
   return (
@@ -7,7 +8,7 @@ const Intro = () => {
       <div className="intro__banner">
         <img
           className="banner_img"
-          src="src\assets\images\illustration-working.svg"
+          src={banner}
           alt="Banner"
         />
       </div>

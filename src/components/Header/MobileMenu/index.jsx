@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './MobileMenu.scss'
+import menuIcon from '../../../assets/icons/ic--outline-menu.svg'
 
 const MobileMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -12,7 +13,7 @@ const MobileMenu = () => {
         <button className="menuToggle__button" onClick={openMenu}>
           <img
             className="button__icon"
-            src="src\assets\icons\ic--outline-menu.svg"
+            src={menuIcon}
             alt="Menu Icon"
           />
         </button>
