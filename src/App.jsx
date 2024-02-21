@@ -15,7 +15,7 @@ function App() {
   async function callingAPI(e) {
     e.preventDefault()
 
-    const backendUrl = 'http://localhost:3001/shorten'
+    const backendUrl = 'http://localhost:9001/shorten'
 
     try {
       const response = await fetch(backendUrl, {
