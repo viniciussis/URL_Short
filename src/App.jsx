@@ -15,7 +15,7 @@ function App() {
   async function callingAPI(e) {
     e.preventDefault()
 
-    const backendUrl = 'http://localhost:9001/shorten'
+    const backendUrl = 'https://url-short-api-seven.vercel.app/shorten'
 
     try {
       const response = await fetch(backendUrl, {
