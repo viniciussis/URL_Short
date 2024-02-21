@@ -23,26 +23,29 @@ function App() {
       shortLink: 'https://translate.google',
     },
   ])
-  const callingAPI = (e) => {
+  async function callingAPI(e) {
     e.preventDefault()
     const apiUrl = 'https://cleanuri.com/api/v1/shorten'
-    const data = new URLSearchParams()
-    data.append('url', link)
-    const options = {
-      method: 'POST',
-      body: data,
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url: link }),
+      })
+      const data = await response.json()
+      setLinks([
+        ...links,
+        {
+          userLink: link,
+          shortLink: data.result_url
+        }
+      ])
+    } catch (error) {
+      console.error('Failed to short link: ', error)
     }
-    fetch(apiUrl, options)
-      .then((response) => response.json())
-      .then((data) => {
-        setLinks(...links, {
-          YourURL: link,
-          shortURL: data.result_url,
-        })
-      })
-      .catch((error) => {
-        console.error('Ocorreu um erro:', error)
-      })
   }
 
   return (
